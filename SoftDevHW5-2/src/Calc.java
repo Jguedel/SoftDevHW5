@@ -10,12 +10,15 @@ public class Calc {
 	private static String[] num;
 	private static Node on;
 
+	//MY CODE WILL STILL RUN WITH ONE NUMBER JUST MAKES THE MEAN = TO THE NUMBER AND SD = 0.
+	
 	static void calc(File listNums) throws IOException {
 		//CRASH IF FILE SELECTED IS EMPTY
 		assert tests.isEmpty(listNums) == false: "Error: The file is empty";
 		listNum = new String(Files.readAllBytes(Paths.get(listNums.toString())));
 		
 		// FORMAT LIST TO TAKE OUT EVERY WHITE SPACE SO ALL NUMBERS ARE SEPERATED BY " "
+		//ALSO TAKES AWAY THE BLANK LINE ERROR
 		listNum = listNum.replaceAll("\\s+", " ");
 		num = listNum.split(" ");
 		
