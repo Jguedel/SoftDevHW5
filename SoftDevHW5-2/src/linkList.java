@@ -1,9 +1,22 @@
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class linkList.
+ */
 public class linkList {
+
+	/** The head. */
 	private static Node head;
+
+	/** The tail. */
 	private static Node tail;
+
+	/** The size. */
 	private static int size = 0;
 
+	/**
+	 * Display.
+	 */
 	public static void display() {
 		Node travel = head;
 		while (travel != null) {
@@ -12,6 +25,11 @@ public class linkList {
 		}
 	}
 
+	/**
+	 * Adds the node.
+	 *
+	 * @param n the number in the node
+	 */
 	public static void addNode(int n) {
 		Node temp = new Node(n);
 		// If list is empty
@@ -50,10 +68,20 @@ public class linkList {
 		}
 	}
 
+	/**
+	 * Gets the size.
+	 *
+	 * @return the size
+	 */
 	public static int getSize() {
 		return size;
 	}
 
+	/**
+	 * Gets the head.
+	 *
+	 * @return the head
+	 */
 	public static Node getHead() {
 		return head;
 	}
