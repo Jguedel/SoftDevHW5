@@ -91,10 +91,6 @@ public class Calc {
 			on = on.next;
 			sqDiff += (on.n - mean) * (on.n - mean);
 		}
-		// for (int i = 0; i < length; i++)
-		// sqDiff += (Integer.valueOf(num[i]) - mean) * (Integer.valueOf(num[i]) -
-		// mean);
-
 		return sqDiff / length;
 	}
 

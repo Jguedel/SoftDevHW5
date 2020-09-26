@@ -12,7 +12,7 @@ public class linkList {
 	private static Node tail;
 
 	/** The size. */
-	private static int size = 0;
+	private static int size;
 
 	/**
 	 * Display.
@@ -34,19 +34,16 @@ public class linkList {
 		Node temp = new Node(n);
 		// If list is empty
 		if (head == null && tail == null) {
-			size++;
 			head = temp;
 			tail = temp;
 		}
 		// add Node to front
 		else if (temp.n <= head.n) {
-			size++;
 			temp.next = head;
 			head = temp;
 		}
 		// add Node to back
 		else if (temp.n >= tail.n) {
-			size++;
 			tail.next = temp;
 			tail = temp;
 		}
@@ -74,7 +71,14 @@ public class linkList {
 	 * @return the size
 	 */
 	public static int getSize() {
-		return size;
+		Node temp = head; 
+        size = 0; 
+        while (temp != null) 
+        { 
+            size++; 
+            temp = temp.next; 
+        } 
+        return size; 
 	}
 
 	/**
